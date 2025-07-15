@@ -22,3 +22,13 @@ output "public_subnet_cidrs" {
   description = "CIDR blocks das subnets públicas"
   value       = aws_subnet.public[*].cidr_block
 }
+
+output "dynamodb_vpc_endpoint_id" {
+  description = "ID do VPC Endpoint do DynamoDB"
+  value       = aws_vpc_endpoint.dynamodb.id
+}
+
+output "public_route_table_id" {
+  description = "ID da route table pública"
+  value       = aws_route_table.public.id
+}
